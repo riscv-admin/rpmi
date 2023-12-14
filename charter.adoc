@@ -1,4 +1,4 @@
-= { New Group Name } { New Group Type } Charter
+= Platform Management Interface Task Group Charter
 
 == Introduction
 
