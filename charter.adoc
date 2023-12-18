@@ -1,39 +1,34 @@
 = Platform Management Interface Task Group Charter
 
 == Introduction
-
-The {New Group Name} {New Group Type} aims to [INSERT CLEAR, CONCISE OVERALL MISSION STATEMENT IN 2-3 SENTENCES].
-
-== Definitions (Optional)
-
-[TERM 1] refers to [DEFINITION 1]. It is critical because [EXPLAIN SIGNIFICANCE]. [INCLUDE ADDITIONAL TERMS/DEFINITIONS IF REQUIRED].
-
-== Background
-
-[PROVIDE CONTEXT ABOUT THE GROUP'S RELEVANCE AND ANY PERTINENT TECHNOLOGY].
+Platforms today pose challenges in terms of manageability and controllability
+where the OS may have to support a variety of hardware which can be different
+in design and devices connected. The extra complexity and demand to manage and
+control the platform along with executing compute workloads is challenging for
+Application Processors running the OS. To mitigate this, systems today contain
+one or more Platform Microcontrollers which abstract various platform specific
+system management and control related tasks. Such designs enable Application 
+Processors to focus on the compute workloads while offloading the other tasks
+like Power management, Performance management, and various platform level tasks
+to Platform Microcontroller. This requires a common interface between
+Application Processors and Platform Microcontrollers for communication.
 
 == Objectives
+The RPMI (RISC-V Platform Management Interface) defines a standard messaging
+based interface to enable the communication between the Application processors
+and the Platform Microcontrollers. The platform specific physical mechanism to
+send/receive RPMI messages is referred to as RPMI Transport.
+The RPMI specification also defines a reference shared memory based RPMI
+transport which can be implemented by RISC-V platforms.
 
-The {New Group Name} {New Group Type} is committed to delivering [SPECIFY DELIVERABLE] with the following attributes:
+The RPMI TG will perform the following tasks:
 
-* [ATTRIBUTE 1]
-* [ATTRIBUTE 2]
-* [ADD MORE AS REQUIRED]
-
-== Exclusions (Optional)
-
-While not currently in scope, the following items may be considered for future iterations:
-
-* [FEATURE 1]
-* [FEATURE 2]
-* [ADD MORE AS REQUIRED]
-
-== Collaborations
-
-To fulfill its objectives, the {New Group Name} {New Group Type} will engage with:
-
-* [GROUP NAME 1] [GROUP TYPE 1]
-* [GROUP NAME 2] [GROUP TYPE 2]
-* [ADDITIONAL GROUPS AS NEEDED]
-
-NOTE: Ensure to replace all placeholders ({ }) with the actual names or information and remove any optional sections that are not applicable to your charter. Also, remove this note :)
+* Define a non-isa RPMI specification which defines extensible and modular
+messaging protocol between the Application Processors and the Platform
+Microcontrollers.
+* Define a SBI RPMI Proxy (RPXY) extension to allow multiple supervisor domains
+to share the same physical RPMI transport through the SBI implementation.
+* Deliver the proof-of-concept implementation of RPMI specification and SBI RPXY
+extension.
+* Coordination with other TGs to keep other RISC-V specifications
+(such as SBI specification) in sync.
