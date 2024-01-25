@@ -26,9 +26,8 @@ The RPMI TG will perform the following tasks:
 * Define a non-isa RPMI specification which defines extensible and modular
 messaging protocol between the Application Processors and the Platform
 Microcontrollers.
-* Define a SBI RPMI Proxy (RPXY) extension to allow multiple supervisor domains
+* Define a SBI extension to allow multiple supervisor domains
 to share the same physical RPMI transport through the SBI implementation.
-* Deliver the proof-of-concept implementation of RPMI specification and SBI RPXY
-extension.
+* Deliver the proof-of-concept implementation of RPMI specification and SBI extension.
 * Coordination with other TGs to keep other RISC-V specifications
 (such as SBI specification) in sync.
